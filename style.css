@@ -1,0 +1,25 @@
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans CJK TC", "PingFang TC", "Heiti TC", "Microsoft JhengHei", Arial, sans-serif; margin: 0; background:#fafafa; color:#222; }
+.app { max-width: 900px; margin: 24px auto; padding: 0 16px; }
+h1 { font-size: 24px; margin-bottom: 16px; }
+
+.controls, .game, .dictionary { background:white; border:1px solid #ddd; border-radius:8px; padding:16px; margin-bottom:16px; }
+.controls label { margin-right: 8px; }
+.controls select, .controls button { margin-right: 8px; padding:6px 10px; }
+
+.target { font-size: 20px; margin-bottom: 12px; }
+#targetChar { font-size: 40px; font-weight: bold; padding: 0 8px; }
+
+.input { display:flex; gap:8px; align-items:center; margin-bottom:8px;}
+.input input { flex:1; padding: 8px; font-size: 16px; }
+.input button { padding: 8px 12px; }
+
+.status { display:flex; gap:24px; align-items:center; flex-wrap:wrap; }
+.feedback { min-height: 24px; font-weight: bold; }
+
+.dictionary h2 { margin-top: 0; }
+.dict-controls { display:flex; gap:8px; margin-bottom:8px; }
+#dictInput { padding:8px; width:160px; }
+#dictResult { white-space: pre-wrap; line-height: 1.6; background:#f7f7f7; padding:12px; border:1px solid #eee; border-radius:6px; }
+
+button:disabled { opacity:0.6; cursor: not-allowed; }
