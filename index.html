@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <title>中文輸入學習遊戲（倉頡 / 速成）</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preload" href="data.json" as="fetch" crossorigin="anonymous" />
+  <link rel="preload" href="data_express.json" as="fetch" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>中文輸入學習遊戲</h1>
+
+    <div class="controls">
+      <label>模式：
+        <select id="mode">
+          <option value="cangjie">倉頡</option>
+          <option value="express">速成</option>
+        </select>
+      </label>
+
+      <label>關卡：
+        <select id="level">
+          <option value="1">Level 1（字根）</option>
+          <option value="2">Level 2（1–500字）</option>
+          <option value="3">Level 3（500–1000字）</option>
+        </select>
+      </label>
+
+      <button id="startBtn">開始</button>
+      <button id="hintBtn" disabled>提示</button>
+    </div>
+
+    <div class="game">
+      <div class="target">
+        目標字：
+        <span id="targetChar">—</span>
+      </div>
+
+      <div class="input">
+        <label>輸入答案（中文本字）：</label>
+        <input id="answer" type="text" placeholder="請打出上方的字（必須一模一樣）" />
+        <button id="submitBtn" disabled>送出</button>
+      </div>
+
+      <div class="status">
+        <div>分數：<span id="score">0</span></div>
+        <div>剩餘題數：<span id="left">0</span></div>
+        <div class="feedback" id="feedback"></div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="dictionary">
+      <h2>字典</h2>
+      <div class="dict-controls">
+        <input id="dictInput" type="text" placeholder="輸入要查的單字（1個字）" maxlength="1" />
+        <button id="dictBtn">查詢</button>
+      </div>
+      <div id="dictResult"></div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
